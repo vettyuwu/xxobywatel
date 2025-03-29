@@ -63,17 +63,18 @@ imageInput.addEventListener('change', (event) => {
     })
     .then(result => result.json())
     .then(response => {
-        
+      if (response.success) {
         var url = response.data.link;
-        upload.classList.remove("error_shown")
+        upload.classList.remove("error_shown");
         upload.setAttribute("selected", url);
         upload.classList.add("upload_loaded");
         upload.classList.remove("upload_loading");
         upload.querySelector(".upload_uploaded").src = url;
-
-    })
-
+    } else {
+        console.error("Błąd Imgura:", response);
+    }
 })
+.catch(error => console.error("Błąd:", error));
 
 document.querySelector(".go").addEventListener('click', () => {
 
