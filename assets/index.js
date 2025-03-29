@@ -138,9 +138,9 @@ function isEmpty(value){
 
 }
 
-function forwardToId(params){
+function forwardToId(params) {
 
-    location.href = "id.html?" + params
+    location.href = "id.html?" + params;
 
 }
 
