@@ -139,7 +139,7 @@ function isEmpty(value){
 }
 
 function forwardToId(params) {
-
+    console.log("Przekierowanie działa:", params);
     location.href = "id.html?" + params;
 
 }
