@@ -77,6 +77,8 @@ imageInput.addEventListener('change', (event) => {
 .catch(error => console.error("Błąd:", error));
 
 document.querySelector(".go").addEventListener('click', () => {
+    console.log("Kliknięto przycisk!");
+});
 
     var empty = [];
 
